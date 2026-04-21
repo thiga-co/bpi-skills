@@ -1,18 +1,20 @@
 {
   "name": "bpi-design-sprint-marketplace",
-  "displayName": "BPI Design Sprint",
-  "description": "Marketplace de skills pour la démarche produit design sprint — encodage des patterns de la bibliothèque de prompts BPI 2026",
   "owner": {
-    "name": "Thiga",
-    "url": "https://thiga.co"
+    "name": "Thiga"
+  },
+  "metadata": {
+    "description": "Plugin marketplace design sprint BPI — workflow discovery → framing → conception → build → traçabilité via 7 skills Claude Code.",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "bpi-design-sprint",
+      "source": "./plugins/bpi-design-sprint",
       "description": "Skills pour la démarche produit complète : ingestion de documents, benchmark en 2 phases, problem framing, opportunity map, conception FigJam, prototypage HTML, traçabilité IA.",
-      "source": "thiga-co/bpi-skills",
       "version": "1.0.0",
-      "homepage": "https://github.com/thiga-co/bpi-skills"
+      "category": "productivity",
+      "tags": ["bpi", "design-sprint", "discovery", "figma", "product-management"]
     }
   ]
 }
