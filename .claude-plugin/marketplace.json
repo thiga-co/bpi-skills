@@ -1,0 +1,14 @@
+{
+  "name": "bpi-design-sprint-marketplace",
+  "displayName": "BPI Design Sprint",
+  "description": "Marketplace de skills pour la démarche produit design sprint — encodage des patterns de la bibliothèque de prompts BPI 2026",
+  "plugins": [
+    {
+      "name": "bpi-design-sprint",
+      "description": "Skills pour la démarche produit complète : ingestion de documents, benchmark en 2 phases, problem framing, opportunity map, conception FigJam, prototypage HTML, traçabilité IA.",
+      "path": "plugins/bpi-design-sprint",
+      "version": "1.0.0",
+      "homepage": "https://github.com/thiga-co/AOBPI"
+    }
+  ]
+}

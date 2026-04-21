@@ -1,0 +1,12 @@
+{
+  "name": "bpi-design-sprint",
+  "description": "Démarche produit design sprint — 7 skills couvrant le cycle complet discovery → framing → conception → build → traçabilité",
+  "version": "1.0.0",
+  "author": {
+    "name": "Thiga",
+    "url": "https://thiga.co"
+  },
+  "homepage": "https://github.com/thiga-co/AOBPI",
+  "repository": "https://github.com/thiga-co/AOBPI.git",
+  "license": "MIT"
+}
