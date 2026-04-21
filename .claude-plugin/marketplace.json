@@ -9,8 +9,8 @@
   },
   "plugins": [
     {
-      "name": "bpi-design-sprint",
-      "source": "./plugins/bpi-design-sprint",
+      "name": "bpi",
+      "source": "./plugins/bpi",
       "description": "Skills pour la démarche produit complète : ingestion de documents, benchmark en 2 phases, problem framing, opportunity map, conception FigJam, prototypage HTML, traçabilité IA.",
       "version": "1.0.0",
       "category": "productivity",

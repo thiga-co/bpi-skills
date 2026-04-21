@@ -19,17 +19,17 @@ thiga-co/bpi-skills
 
 ## Les 7 skills
 
-### `/bpi-design-sprint:ingest-doc [chemin/vers/document]`
+### `/bpi:ingest-doc [chemin/vers/document]`
 
 Extraction structurée d'un document source en 5 dimensions : objectifs explicites, objectifs implicites, critères pondérés, données business, pièges éliminatoires. Chaque ligne du tableau cite sa source exacte (§X.Y ou page N).
 
 ```
-/bpi-design-sprint:ingest-doc cahier-des-charges-BPI.pdf
+/bpi:ingest-doc cahier-des-charges-BPI.pdf
 ```
 
 ---
 
-### `/bpi-design-sprint:benchmark [sujet] [N-métriques]`
+### `/bpi:benchmark [sujet] [N-métriques]`
 
 Recherche de benchmarks sectoriels en 2 phases séquentielles avec arrêt obligatoire entre les deux :
 
@@ -39,24 +39,24 @@ Recherche de benchmarks sectoriels en 2 phases séquentielles avec arrêt obliga
 La séparation des phases est intentionnelle : elle a permis d'invalider des données lors d'itérations précédentes.
 
 ```
-/bpi-design-sprint:benchmark "délai instruction PME" 5
-/bpi-design-sprint:benchmark "taux abandon formulaire bancaire" 3
+/bpi:benchmark "délai instruction PME" 5
+/bpi:benchmark "taux abandon formulaire bancaire" 3
 ```
 
 ---
 
-### `/bpi-design-sprint:problem-framing [acteur1] [acteur2] ...`
+### `/bpi:problem-framing [acteur1] [acteur2] ...`
 
 Génération des HMW (How Might We) et Job Stories par acteur, ancrés sur les fichiers sources du projet. Chaque statement cite une donnée chiffrée. Les acteurs sans données suffisantes sont explicitement exclus — pas d'inférence.
 
 ```
-/bpi-design-sprint:problem-framing CA entrepreneur back-office
-/bpi-design-sprint:problem-framing tous
+/bpi:problem-framing CA entrepreneur back-office
+/bpi:problem-framing tous
 ```
 
 ---
 
-### `/bpi-design-sprint:opportunity-map [axe-à-modifier]`
+### `/bpi:opportunity-map [axe-à-modifier]`
 
 Enrichissement de l'opportunity map par itérations unitaires — une seule dimension modifiée par invocation, toutes les autres préservées. Axes supportés :
 
@@ -70,13 +70,13 @@ Enrichissement de l'opportunity map par itérations unitaires — une seule dime
 | `supprimer [opp]` | Retirer une opportunité avec vérification des dépendances |
 
 ```
-/bpi-design-sprint:opportunity-map roi
-/bpi-design-sprint:opportunity-map "supprimer InstructIA"
+/bpi:opportunity-map roi
+/bpi:opportunity-map "supprimer InstructIA"
 ```
 
 ---
 
-### `/bpi-design-sprint:figjam-conception [nom-opportunité]`
+### `/bpi:figjam-conception [nom-opportunité]`
 
 Conception FigJam complète en 3 livrables séquentiels avec validation humaine entre chaque :
 
@@ -87,31 +87,31 @@ Conception FigJam complète en 3 livrables séquentiels avec validation humaine 
 Requiert le MCP Figma actif dans Claude Code.
 
 ```
-/bpi-design-sprint:figjam-conception InstructIA
-/bpi-design-sprint:figjam-conception DossierAssist
+/bpi:figjam-conception InstructIA
+/bpi:figjam-conception DossierAssist
 ```
 
 ---
 
-### `/bpi-design-sprint:proto-build [nom-bet] [périmètre]`
+### `/bpi:proto-build [nom-bet] [périmètre]`
 
 Prototype HTML/CSS/JS vanilla avec le design system BPI. Le périmètre est borné explicitement avant la première ligne de code (écrans inclus, happy path only, pas d'intégration SI, interactions simulées en JS).
 
 Contraintes : pas de framework, pas de bundler, données mockées avec noms réalistes ("Métalux SAS"), portail de navigation si multi-écrans.
 
 ```
-/bpi-design-sprint:proto-build InstructIA happy-path-only
-/bpi-design-sprint:proto-build DossierAssist qualification-flow
+/bpi:proto-build InstructIA happy-path-only
+/bpi:proto-build DossierAssist qualification-flow
 ```
 
 ---
 
-### `/bpi-design-sprint:journal-ia`
+### `/bpi:journal-ia`
 
 Mise à jour du `journal_de_bord_IA.md` avec la trace structurée de la session : livrables produits, prompts significatifs, décisions de l'équipe (validations, corrections, exclusions), tokens estimés. L'IA formalise — l'équipe décide.
 
 ```
-/bpi-design-sprint:journal-ia
+/bpi:journal-ia
 ```
 
 ---
@@ -131,7 +131,7 @@ ingest-doc   →   benchmark   →   problem-framing   →   opportunity-map
 ## Structure du plugin
 
 ```
-plugins/bpi-design-sprint/
+plugins/bpi/
 ├── .claude-plugin/plugin.json
 └── skills/
     ├── benchmark/          SKILL.md · template.md · source-checklist.md
